@@ -2,17 +2,18 @@ require 'pry'
 
 
 def pigeon_organizer(data)
-  pigeon_data = data.reduce({}){|memo (k1, v1)
+  pigeon_data = data.reduce({{[]}}){|outter, (k1, v1)|
     v1.each{|(k2,v2)|
       v2.each{|name|
-        memo[name]
+        outter[name][k1].push(k2.to_s) 
         
-        memo
+        
       }
-      memo
+      outter
     }
-    memo
+    
   }
+  {"theo" => {color: ["purple"]}
 end
 
 def unused(data)
