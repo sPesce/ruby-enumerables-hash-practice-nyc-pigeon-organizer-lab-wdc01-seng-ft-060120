@@ -6,10 +6,13 @@ def pigeon_organizer(data)
     v1.each{|(k2,v2)|
       v2.each{|name|
         if(!outter[name])
-         outter[name] = {}
+          outter[name] = {}
         end
-    
-        outter[name][k1].push(k2.to_s) 
+        if(!outter[name][k1])
+          outter[name][k1] = []
+        else 
+          outter[name][k1].push(k2.to_s) 
+        end
         
         
       }
