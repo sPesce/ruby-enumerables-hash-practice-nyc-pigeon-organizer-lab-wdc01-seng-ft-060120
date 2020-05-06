@@ -16,9 +16,9 @@ def pigeon_organizer(data)
         
         
       }
-      outter
+      
     }
-    
+    outter
   }
   
 end
