@@ -17,7 +17,7 @@ def nyc_pigeon_organizer(data)
               puts "adding #{k2} to outter[#{name}][#{k1}]"
           outter[name][k1] << (k2.to_s) 
         end
-        if (k2 == :gender)
+        if (k1 == :gender)
           testbool
         end 
         
