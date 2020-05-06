@@ -1,7 +1,7 @@
 require 'pry'
 
 
-def pigeon_organizer(data)
+def nyc_pigeon_organizer(data)
   pigeon_data = data.reduce({}){|outter, (k1, v1)|
     v1.each{|(k2,v2)|
       v2.each{|name|
