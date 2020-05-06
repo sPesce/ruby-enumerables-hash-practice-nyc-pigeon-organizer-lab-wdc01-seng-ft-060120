@@ -3,7 +3,15 @@ require 'pry'
 
 def pigeon_organizer(data)
   pigeon_data = data.reduce({}){|memo (k1, v1)
-    
+    v1.each{|(k2,v2)|
+      v2.each{|name|
+        memo[name]
+        
+        memo
+      }
+      memo
+    }
+    memo
   }
 end
 
