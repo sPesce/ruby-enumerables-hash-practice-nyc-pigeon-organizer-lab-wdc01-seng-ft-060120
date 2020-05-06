@@ -4,10 +4,17 @@ require 'pry'
 def nyc_pigeon_organizer(data)
   testbool = false
   
+  ###################################
+  #outter: new hash (memo)
+  #original hash structure:
+  #{k1 => {k2 => [name[0] ... name[n]] } }
+  #       \  ------  v1 --------------/
+  #               \ ---- v2 --------/
   pigeon_data = data.reduce({}){|outter, (k1, v1)|
     v1.each{|(k2,v2)|
       v2.each{|name|
-              
+        
+        #create hashes/arrays where nil       
         if(!outter[name])
           outter[name] = {}
         end
@@ -17,15 +24,16 @@ def nyc_pigeon_organizer(data)
               puts "adding #{k2} to outter[#{name}][#{k1}]"
           outter[name][k1] << (k2.to_s) 
         end
+        
+        ###test if :gender was visited### 
         if (k1 == :gender)
           testbool
         end 
-        
       }
-      
     }
     outter
   }
+  ####tests##### 
   puts "gender visited? #{testbool}"
   pp pigeon_data
   
