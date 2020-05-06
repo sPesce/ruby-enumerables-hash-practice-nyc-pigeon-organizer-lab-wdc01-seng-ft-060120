@@ -11,7 +11,8 @@ def nyc_pigeon_organizer(data)
         if(!outter[name][k1])
           outter[name][k1] = []
         else 
-          outter[name][k1].push(k2.to_s) 
+          puts "adding #{k2} to outter[#{name}][#{k1}]"
+          outter[name][k1] << (k2.to_s) 
         end
         
         
