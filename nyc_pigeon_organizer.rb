@@ -2,26 +2,33 @@ require 'pry'
 
 
 def nyc_pigeon_organizer(data)
+  testbool = false
+  
   pigeon_data = data.reduce({}){|outter, (k1, v1)|
     v1.each{|(k2,v2)|
       v2.each{|name|
+              
         if(!outter[name])
           outter[name] = {}
         end
         if(!outter[name][k1])
           outter[name][k1] = []
         else 
-          puts "adding #{k2} to outter[#{name}][#{k1}]"
+              puts "adding #{k2} to outter[#{name}][#{k1}]"
           outter[name][k1] << (k2.to_s) 
         end
-        
+        if (k2 == :gender)
+          testbool
+        end 
         
       }
       
     }
     outter
   }
+  puts "gender visited? #{testbool}"
   pp pigeon_data
+  
 end
 
 def unused(data)
