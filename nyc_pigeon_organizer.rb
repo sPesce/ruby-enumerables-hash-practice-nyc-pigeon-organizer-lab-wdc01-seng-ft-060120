@@ -20,7 +20,7 @@ def pigeon_organizer(data)
     }
     
   }
-  {"theo" => {color: ["purple"]}
+  
 end
 
 def unused(data)
