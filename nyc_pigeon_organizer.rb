@@ -20,7 +20,7 @@ def nyc_pigeon_organizer(data)
     }
     outter
   }
-  
+  pp outter
 end
 
 def unused(data)
