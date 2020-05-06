@@ -1,6 +1,13 @@
 require 'pry'
 
-def nyc_pigeon_organizer(data)
+
+def pigeon_organizer(data)
+  pigeon_data = data.reduce({}){|memo (k1, v1)
+    
+  }
+end
+
+def unused(data)
  pigeon_data = {}
  data.each{|(outer_key, outer_val)|
    outer_val.each{|mid_key, mid_val|
@@ -19,6 +26,4 @@ def nyc_pigeon_organizer(data)
     
    }
  }
- binding.pry
- 
 end
